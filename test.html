@@ -2,7 +2,6 @@
 <html>
   <head>
     <!-- Required meta tags -->
-    <!--example comment ***************************************************-->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -52,7 +51,7 @@
         }
         //Todo getEmailValue
         let email = document.getElementById("email").value;
-        if (!checkValidEmail(email)) {
+        if (!isValidEmail(email)) {
           alert("Invalid Email !");
           return;
         }
@@ -65,7 +64,7 @@
         return false;
       }
 
-      function checkValidEmail(email) {
+      function isValidEmail(email) {
         let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         if (email.match(mailformat)) {
           return true;
