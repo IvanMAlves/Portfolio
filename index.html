@@ -52,7 +52,7 @@
         }
         //Todo getEmailValue
         let email = document.getElementById("email").value;
-        if (!isValidEmail(email)) {
+        if (!checkValidEmail(email)) {
           alert("Invalid Email !");
           return;
         }
@@ -65,7 +65,7 @@
         return false;
       }
 
-      function isValidEmail(email) {
+      function checkValidEmail(email) {
         let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         if (email.match(mailformat)) {
           return true;
